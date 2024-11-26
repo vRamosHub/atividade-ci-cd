@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull Docker image
-        run: docker pull jujurufino/atv:latest
+        run: docker pull vitramo/atv:latest
 
       - name: Stop Docker container
         run: docker stop ci || true
@@ -21,4 +21,4 @@ jobs:
         run: docker rm ci || true
 
       - name: Run Docker container
-        run: docker run --name ci -d -p 8080:8080 jujurufino/atv:latest
+        run: docker run --name ci -d -p 8080:8080 vitramo/atv:latest
